@@ -54,15 +54,10 @@ c.right = f;
   until we can't anymore and then we can go across the tree.
   values: a,b,d,e,c,f
 */
-
-
-Implementation:
-Data structure: Stack
 ```
 
 ***How can we manage to implement this algorithm?***
 > It's going to use a data structure like a stack.
-
 
 ***Iterative version***
 ```javascript
