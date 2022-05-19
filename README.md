@@ -56,10 +56,10 @@ c.right = f;
 */
 ```
 
-***How can we manage to implement this algorithm?***
+#### How can we manage to implement this algorithm?
 > It's going to use a data structure like a stack.
 
-***Iterative version***
+#### Iterative version
 ```javascript
  const depthFirstValues = (root) => {
    if (root === null) return [];
@@ -73,6 +73,16 @@ c.right = f;
    }
    return result;
  };
+``` 
+
+#### Recursive version
+```javascript
+const depthFirstValues = (root) => {
+  if (root === null) return [];
+  const leftValues = depthFirstValues(root.left);
+  const rightValues = depthFirstValues(root.right);
+  return [root.val, ...leftValues, ...rightValues]; 
+}
 ```
 
 ## breadth first values problem
