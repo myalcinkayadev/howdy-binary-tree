@@ -59,7 +59,7 @@ c.right = f;
 #### How can we manage to implement this algorithm?
 > It's going to use a data structure like a stack.
 
-### Time-space complexity
+#### Time-space complexity
 ***n = # of nodes***
 - Time:  O(n)
 - Space: O(n)
