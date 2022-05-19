@@ -47,5 +47,37 @@ c.right = f;
 ```
 
 ## depth first values problem
+```javascript
+/*
+  If I'm doing a depth first traversal, I need to go deeper in the tree before I move laterally.
+  The really important characteristic is we must go deeper in the tree 
+  until we can't anymore and then we can go across the tree.
+  values: a,b,d,e,c,f
+*/
+
+
+Implementation:
+Data structure: Stack
+```
+
+***How can we manage to implement this algorithm?***
+> It's going to use a data structure like a stack.
+
+
+***Iterative version***
+```javascript
+ const depthFirstValues = (root) => {
+   if (root === null) return [];
+   const result = [];
+   const stack = [root];
+   while (stack.length > 0) {
+     const current = stack.pop();
+     result.push(current.val);
+     if (current.right) stack.push(current.right);
+     if (current.left) stack.push(current.left);
+   }
+   return result;
+ };
+```
 
 ## breadth first values problem
