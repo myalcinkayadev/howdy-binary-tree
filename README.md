@@ -157,3 +157,13 @@ const treeIncludes = (root, target) => {
   return treeIncludes(root.left, target) || treeIncludes(root.right, target); 
 };
 ```
+
+## tree sum problem
+
+#### Recursive solution
+```javascript
+const treeSum = (root) => {
+  if (root === null) return 0;
+  return root.val + treeSum(root.left) + treeSum(root.right);
+};
+```
