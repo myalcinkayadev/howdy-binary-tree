@@ -64,7 +64,7 @@ c.right = f;
 - Time:  O(n)
 - Space: O(n)
 
-#### Iterative version
+#### Iterative solution
 ```javascript
  const depthFirstValues = (root) => {
    if (root === null) return [];
@@ -80,7 +80,7 @@ c.right = f;
  };
 ``` 
 
-#### Recursive version
+#### Recursive solution
 ```javascript
 const depthFirstValues = (root) => {
   if (root === null) return [];
