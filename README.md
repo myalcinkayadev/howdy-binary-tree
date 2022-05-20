@@ -91,3 +91,6 @@ const depthFirstValues = (root) => {
 ```
 
 ## breadth first values problem
+#### How can we manage to implement this algorithm?
+> It's going to use a queue data structure.
+
