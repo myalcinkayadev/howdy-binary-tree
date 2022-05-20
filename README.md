@@ -108,7 +108,7 @@ const depthFirstValues = (root) => {
 
 #### Time-space complexity
 ***n = # of nodes***
-- Time: O(n) -> best 
+- Time: O(n)
 - Space: O(n)
 
 #### Iterative solution
@@ -132,6 +132,8 @@ const breadthFirstValues = (root) => {
 ```
 
 ## tree includes problem
+
+#### Iterative solution
 ```javascript
 const treeIncludes = (root, target) => {
   if (root === null) return false;
@@ -145,4 +147,13 @@ const treeIncludes = (root, target) => {
   }
   return false;
 }
+```
+
+#### Recursive solution
+```javascript
+const treeIncludes = (root, target) => {
+  if (root === null) return false;
+  if (root.val === target) return true;
+  return treeIncludes(root.left, target) || treeIncludes(root.right, target); 
+};
 ```
