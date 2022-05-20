@@ -91,6 +91,42 @@ const depthFirstValues = (root) => {
 ```
 
 ## breadth first values problem
+``` javascript
+//      a
+//    /   \
+//   b     c
+//  / \     \
+// d   e     f
+//    /       \
+//   g         h
+
+//   -> ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+```
+
 #### How can we manage to implement this algorithm?
 > It's going to use a queue data structure.
 
+#### Time-space complexity
+***n = # of nodes***
+- Time: O(n) -> best 
+- Space: O(n)
+
+#### Iterative solution
+```javascript
+const breadthFirstValues = (root) => {
+  if (root === null) return [];
+
+  const values = [];
+  const queue = [root];
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    values.push(current.val);
+
+    if (current.left !== null) queue.push(current.left);
+    if (current.right !== null) queue.push(current.right);
+  }
+
+  return values;
+}
+```
